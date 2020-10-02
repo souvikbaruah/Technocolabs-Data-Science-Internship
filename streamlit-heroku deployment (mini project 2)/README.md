@@ -1,2 +1,4 @@
 # Technocolabs-Data-Science-Internship
-Technocolabs Data Science Internship Projects
+This repository contains all the file of Technocolabs Data Science Internship (September 2020)
+
+[Web App (Mini Project 2)](https://predictor-by-souvik.herokuapp.com)
