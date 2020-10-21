@@ -1,2 +1,2 @@
 # Technocolabs-Data-Science-Internship
-Technocolabs Data Science Internship Projects
+This repository contains all the files of Technocolabs Data Science Internship (September 2020)
