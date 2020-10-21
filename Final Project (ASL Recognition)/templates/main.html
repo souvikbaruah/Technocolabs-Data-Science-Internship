@@ -1,0 +1,150 @@
+
+<html>
+    <head>
+        <title>ASL Predictor</title>
+        <meta name="og:title" content="ASL Detection">
+        <meta name="author" content="SOUVIK BARUAH">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Rambla:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&display=swap');
+            html{
+                position: relative;
+                min-height: 100%;
+            }
+
+            body{
+                margin: 0 0 100px;
+                padding: 25px;
+            }
+            footer {
+                background-color: black;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 200px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            a{
+                text-decoration: none !important;
+            }
+
+            a:hover{
+                cursor: pointer;
+            }
+
+            .nav-link{
+                font-size: 17px;
+            }
+
+            .card{
+                border: 1px solid black;
+            }
+
+            .form-group .form-control{
+                border: 1px solid black;
+            }
+
+            :root{
+                    --color-black: #000000;
+                    --color-white: #ffffff;
+                    --color-border: #ffffff34;
+                    --font-staat: 'Staatliches', cursive;
+                    --font-os: 'Oswald', sans-serif;
+                    --font-ram: 'Rambla', sans-serif;
+                }
+
+                .font-staat{
+                    font: normal 400 18px var(--font-staat);
+                }
+                .font-os{
+                    font: normal 300 18px var(--font-os);
+                }
+                .font-ram{
+                    font: normal bold 18px var(--font-ram);
+                }
+                .font-ram2{
+                    font: normal 18px var(--font-ram);
+                }
+
+                .font-size-40{
+                    font-size: 40px;
+                }
+                .font-size-34{
+                    font-size: 34px;
+                }
+                .font-size-27{
+                    font-size: 27px;
+                }
+                .font-size-20{
+                    font-size: 20px;
+                }
+                .font-size-16{
+                    font-size: 16px;
+                }
+
+                .bgcolor-black{
+                    background-color: var(--color-black);
+                }
+        </style>
+    
+    
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="background-color: black !important;">
+            <a href="{{ url_for('index') }}" style="color: white;font-size: 35px;"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i>&nbsp;ASL Predictor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a href="https://souvikbaruah.github.io" target="_blank" class="nav-link"><span style="font-size: 20px;" class="font-ram fa fa-address-card" aria-hidden="true"></span>&nbsp;Souvik's Portfolio</a>
+                  </li>
+               </ul>
+             </div>
+           </nav>
+           
+           <br><br>
+
+           <div class="container-fluid">
+               {% block content %}
+               {% endblock %}
+           </div>
+
+           <footer>
+            <div class="row bh-light py-4 bg-light">
+                <div class="col-sm-4 my-5 text-center">
+                    <h6 class="font-ram font-size-16 text-black-50">&copy;2020 ASL Predictor. All rights reserved</h6>
+                </div>
+                <div class="col-sm-4 my-4 text-center">
+                    <div class="footer-title">
+                        <a href="#" class="navbar-brand font-staat font-size-40 text-dark">&nbsp;  ASL    PREDICTOR</a>
+                        <p class="description font-os font-size-16 text-black-50 text-uppercase">Souvik Baruah</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 my-5 text-center">
+                    <a href="https://www.facebook.com/souvik.baruah.92" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-facebook"></i></span></a>
+                    <a href="https://www.linkedin.com/in/souvik-baruah/" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-linkedin"></i></span></a>
+                    <a href="https://github.com/souvikbaruah" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-github"></i></span></a>
+                    <a href="https://www.instagram.com/sickboy_souvik/" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-instagram"></i></span></a>
+                    <a href="https://www.youtube.com/channel/UCu_W5UwAK2ycOXdrty0UBWQ" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-youtube"></i></span></a>
+                    <a href="https://www.hackerrank.com/baruahsouvik" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-hackerrank"></i></span></a>
+                    <a href="https://bitbucket.org/baruahsouvik/" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-bitbucket"></i></span></a>
+                    <a href="https://twitter.com/baruah_souvik" style="color:black"><span class="mr-3 font-size-20"><i class="fab fa-twitter"></i></span></a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    </body>
+</html>
